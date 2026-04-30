@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Page</title>
+</head>
+<body>
+
+  <header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a href="#" onclick="showPage('home')">HOME</a>
+      <a href="#" onclick="showPage('menu')">MENU</a>
+      <a href="#" onclick="showPage('contact')">CONTACT</a>
+      <a href="#" onclick="showPage('about')">ABOUT</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section id="home" class="page active">
+
+      <article>
+
+        <h1>Menu</h1>
+
+        <!-- CTA TEXT -->
+        <h1>Serving Authentic Mexican Food Since 1990</h1>
+
+        <!-- IMAGE -->
+        <img src="https://i.postimg.cc/mgpJwTxy/marthas-menu.png" alt="Menu Image">
+
+        <!-- ORDER ONLINE LINK -->
+        <a href="#">Order Online</a>
+
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p> Martha's Mexican Resturaunt 2026 </p>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>
