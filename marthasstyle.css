@@ -1,10 +1,13 @@
+/* New Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 /* Styles */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #FFF8E7; /* Warm off-white background */
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #FFF8E7, #FFE8C2);
   color: #333;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* Navigation Bar */
@@ -13,7 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #D62828; /* Primary Red */
+  background-color: #D62828;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
@@ -23,13 +26,17 @@ body {
   text-decoration: none;
   display: block;
   font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              transform 0.2s ease;
 }
 
 .navbar a:hover,
 .navbar a:focus {
-  background-color: #FFD166; /* Secondary Yellow */
+  background-color: #FFD166;
   color: #333;
+  transform: translateY(-2px);
 }
 
 /* Main Page Sections */
@@ -37,8 +44,18 @@ body {
   display: none;
   padding: 40px;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 40px auto;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
   text-align: center;
+
+  animation: fadeIn 0.5s ease;
 }
 
 /* Visible Section */
@@ -48,27 +65,58 @@ body {
 
 /* Section Headings */
 h2 {
-  color: #D62828; /* Primary Red */
+  color: #D62828;
   margin-bottom: 20px;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 h3 {
-  color: #2A9D8F; /* Accent Green */
+  color: #2A9D8F;
   margin-top: 30px;
   margin-bottom: 10px;
   font-size: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline Accent */
+h3::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 4px;
+  margin: 8px auto 0;
+  background: #FFD166;
+  border-radius: 999px;
 }
 
 /* Articles within sections */
 article {
   margin-bottom: 40px;
+  padding: 25px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  border-radius: 16px;
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+article:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* Paragraphs */
 p {
   max-width: 800px;
   margin: 0 auto 20px;
+  font-size: 1.05rem;
 }
 
 /* Images */
@@ -76,11 +124,23 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 20px auto;
-  border-radius: 8px;
+  margin: 25px auto;
+
+  border-radius: 14px;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.4s ease,
+              box-shadow 0.4s ease;
 }
 
-/* Lists (if used elsewhere on the site) */
+img:hover {
+  transform: scale(1.02);
+
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Lists */
 ul {
   list-style: none;
   padding: 0;
@@ -88,18 +148,41 @@ ul {
 
 li {
   margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: #D62828;
 }
 
 /* Links inside page content */
 .page a {
-  color: #2A9D8F; /* Accent Green */
+  color: #2A9D8F;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .page a:hover {
-  color: #D62828; /* Primary Red */
+  color: #D62828;
   text-decoration: underline;
+}
+
+/* Smooth Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive Design */
@@ -116,6 +199,7 @@ li {
 
   .page {
     padding: 20px;
+    margin: 20px;
   }
 
   h2 {
@@ -125,4 +209,3 @@ li {
   h3 {
     font-size: 1.25rem;
   }
-}
