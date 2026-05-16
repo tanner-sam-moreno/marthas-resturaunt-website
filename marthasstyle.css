@@ -1,0 +1,128 @@
+/* Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #FFF8E7; /* Warm off-white background */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #D62828; /* Primary Red */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.navbar a {
+  color: #FFFFFF;
+  padding: 14px 20px;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  background-color: #FFD166; /* Secondary Yellow */
+  color: #333;
+}
+
+/* Main Page Sections */
+.page {
+  display: none;
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Visible Section */
+.page.active {
+  display: block;
+}
+
+/* Section Headings */
+h2 {
+  color: #D62828; /* Primary Red */
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+h3 {
+  color: #2A9D8F; /* Accent Green */
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+/* Articles within sections */
+article {
+  margin-bottom: 40px;
+}
+
+/* Paragraphs */
+p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+/* Lists (if used elsewhere on the site) */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Links inside page content */
+.page a {
+  color: #2A9D8F; /* Accent Green */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.page a:hover {
+  color: #D62828; /* Primary Red */
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar a {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .page {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
