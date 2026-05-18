@@ -1,52 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Untitled</title>
-    
-
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>menu</title>
-    
-
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Page</title>
+  <title>Simple Navbar</title>
+
+  <!-- Link to CSS so it works right -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="#" onclick="showPage('home')">HOME</a>
+    <a href="#" onclick="showPage('menu')">MENU</a>
+    <a href="#" onclick="showPage('contact')">CONTACT</a>
+    <a href="#" onclick="showPage('about')">ABOUT</a>
+  </div>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <a href="#" onclick="showPage('home')">HOME</a>
-      <a href="#" onclick="showPage('menu')">MENU</a>
-      <a href="#" onclick="showPage('contact')">CONTACT</a>
-      <a href="#" onclick="showPage('about')">ABOUT</a>
-    </nav>
-
-  </header>
-
-  <main>
-
-    <section id="home" class="page active">
-
-      <article>
-
+  <!-- Pages -->
+  <div id="home" class="page active">
     <h1>Martha's Mexican Resturaunt</h1>
 
     <!-- CTA -->
@@ -54,26 +26,141 @@
 
     <!-- WELCOME MESSAGE -->
     <h2>
-      Martha's Mexican Food is a must-visit spot for delicious Mexican cuisine in the small town of Orosi, California. 
-      We offer a wide range of utilities including takeout, delivery, outdoor seating, and catering. 
+      Martha's Mexican Food is a must-visit spot for delicious Mexican cuisine in the small town of Orosi, California.
+      We offer a wide range of utilities including takeout, delivery, outdoor seating, and catering.
       All are welcome, and encouraged to come by and have a bite!
     </h2>
 
     <!-- IMAGES -->
     <div>
-        <img src="https://i.postimg.cc/sfZWfmDD/homepage2.png" alt="Image 1">
-        <img src="https://i.postimg.cc/hjXddbLp/homepage1.png" alt="Image 2">
-        <img src="https://i.postimg.cc/PrW8Yqw4/homepage3.png" alt="Image 3">
+      <img src="https://i.postimg.cc/sfZWfmDD/homepage2.png" alt="Image 1">
+      <img src="https://i.postimg.cc/hjXddbLp/homepage1.png" alt="Image 2">
+      <img src="https://i.postimg.cc/PrW8Yqw4/homepage3.png" alt="Image 3">
     </div>
-
   </div>
 
+  <div id="menu" class="page">
+    <h1>Menu</h1>
 
-  </main>
+    <!-- CTA TEXT -->
+    <h1>Serving Authentic Mexican Food Since 1990</h1>
 
-  <footer>
-    <p> Martha's Mexican Resturaunt 2026 </p>
-  </footer>
+    <!-- IMAGE -->
+    <img src="https://i.postimg.cc/mgpJwTxy/marthas-menu.png" alt="Menu Image">
+
+    <!-- ORDER ONLINE LINK -->
+    <a href="#">Order Online</a>
+  </div>
+
+  <div id="contact" class="page">
+    <header>
+      <h1>Get in Touch with Martha’s Mexican Restaurant</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Contact Info</h2>
+        <ul>
+          <li>Phone: (559) 528 - 6032</li>
+          <li>Email: contact@marthas.com</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Location & Map</h2>
+        <p>Address: 41435 Road 128, Orosi, CA 93647</p>
+
+        <iframe
+          src="https://www.google.com/maps?q=41435+Road+128,+Orosi,+CA+93647&output=embed"
+          width="600"
+          height="450">
+        </iframe>
+      </section>
+
+      <section>
+        <h2>Hours</h2>
+        <ul>
+          <li>Mon–Thu: 8 AM - 8 PM</li>
+          <li>Fri–Sat: 8 AM - 9 PM</li>
+          <li>Sun: 8 AM - 7 PM</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Social Media</h2>
+
+        <article>
+          <img src="https://i.postimg.cc/L4qWHc1g/facebookicon.png" alt="Facebook Icon">
+          <a href="#">Facebook</a>
+        </article>
+
+        <article>
+          <img src="https://i.postimg.cc/vZvqqMp5/googleformsicon.png" alt="Contact Form Icon">
+          <a href="#">Contact Form</a>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div id="about" class="page">
+    <h1>About Us</h1>
+
+    <main>
+      <section>
+        <article>
+          <h2>Our Story</h2>
+          <p>
+            Martha's started as a small hole-in-the-wall restaurant with a simple goal:
+            serve authentic Mexican food made with the same care and tradition found in
+            family kitchens. Martha, the sister of the brothers who founded La Esperanza
+            in Cutler, brought her own passion and family recipes to Orosi.
+          </p>
+          <p>
+            As more and more families discovered the restaurant, its popularity quickly
+            grew. What began as a modest location soon became a local favorite, leading
+            Martha to move the restaurant to its current home so she could continue
+            sharing her food with an even larger community.
+          </p>
+        </article>
+
+        <article>
+          <h3>Mission & Values</h3>
+          <p>
+            Our mission is to provide authentic Mexican cuisine in a warm and welcoming
+            atmosphere where everyone feels at home. We believe great food brings people
+            together, which is why we are proud to offer a family-oriented environment
+            built on tradition, hospitality, and community.
+          </p>
+        </article>
+
+        <article>
+          <h3>Meet the Owner</h3>
+          <p>
+            Martha has spent years perfecting the recipes and techniques passed down
+            through her family. Inspired by her culinary roots and a lifelong love of
+            cooking, she takes pride in preparing dishes that honor authentic Mexican
+            flavors while creating memorable experiences for every guest who walks
+            through the door.
+          </p>
+
+          <img src="https://i.postimg.cc/hjXddbLp/homepage1.png" alt="Photo of Martha, owner of Martha's">
+        </article>
+
+        <article>
+          <h3>What Makes Us Special</h3>
+          <p>
+            From treasured family recipes to homemade dishes prepared fresh each day,
+            Martha's is known for its authentic flavors and dedication to quality. Our
+            strong connection to the community and commitment to making every guest feel
+            like family are what truly set us apart.
+          </p>
+
+          <img src="https://i.postimg.cc/L6ZSTGx4/comboimage.png" alt="Traditional family recipes">
+          <img src="https://i.postimg.cc/63msVhRd/buildingfront.png" alt="Homemade Mexican dishes">
+        </article>
+      </section>
+    </main>
+  </div>
 
   <script>
     function showPage(pageId) {
@@ -85,12 +172,4 @@
   </script>
 
 </body>
-</html>
-    
-  </body>
-  
-</html>
-    
-  </body>
-  
 </html>
